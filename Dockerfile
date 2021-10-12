@@ -90,14 +90,14 @@ RUN apt-get autoremove -y && \
 
 WORKDIR /opt/odoo
 
-RUN wget https://github.com/Trust-Code/odoo/archive/14.0.zip -O odoo.zip && \
+RUN wget https://github.com/odoo/odoo/archive/14.0.zip -O odoo.zip && \
     wget https://github.com/oca/web/archive/14.0.zip -O web.zip && \
     wget https://github.com/oca/account-reconcile/archive/14.0.zip -O account-reconcile.zip && \
     wget https://github.com/oca/server-ux/archive/14.0.zip -O server-ux.zip && \
     wget https://github.com/oca/reporting-engine/archive/14.0.zip -O reporting-engine.zip && \
     wget https://github.com/oca/account-financial-reporting/archive/14.0.zip -O account-financial-reporting.zip && \
     wget https://github.com/oca/mis-builder/archive/14.0.zip -O mis-builder.zip && \
-    wget https://github.com/OCA/commission/archive/14.0.zip -O commission.zip && \
+    wget https://github.com/oca/commission/archive/14.0.zip -O commission.zip && \
     wget https://github.com/Trust-Code/helpdesk/archive/14.0.zip -O helpdesk.zip && \
     wget https://github.com/odoo/design-themes/archive/14.0.zip -O design-themes.zip && \
     wget https://github.com/Trust-Code/trustcode-addons/archive/14.0.zip -O trustcode-addons.zip && \
