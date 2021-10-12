@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: ['12.0']
+    branches: ['14.0']
 
   workflow_dispatch:
 
@@ -28,4 +28,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: codions/odoo:12.0
+          tags: codions/odoo:14.0

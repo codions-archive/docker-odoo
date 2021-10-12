@@ -1,4 +1,4 @@
-# Dependências Odoo
+##### Dependências Odoo #####
 libxml2-dev
 libxslt1-dev
 libevent-dev
@@ -6,9 +6,20 @@ libsasl2-dev
 libldap2-dev
 libpq-dev
 libjpeg-dev
+libtiff5-dev
+libjpeg8-dev
+libopenjp2-7-dev
+zlib1g-dev
+libfreetype6-dev
+liblcms2-dev
+libwebp-dev
+libharfbuzz-dev
+libfribidi-dev
+libxcb1-dev
 
 # Ferramentas
 gcc
+g++
 python3-pip
 python3-dev
 locales
@@ -21,13 +32,14 @@ gettext-base
 openssh-client
 postgresql-client
 
-# Dependências da Localização Brasileira
+##### Dependências da Localização Brasileira #####
 libssl-dev
 libxmlsec1-dev
 python-openssl
 python-cffi
 
-# Dependências do WKHTMLTOX
+
+##### Dependências do WKHTMLTOX #####
 fontconfig
 libx11-6
 libxext6
