@@ -3,7 +3,7 @@ version: '3'
 services:
 
   odoo:
-    image: codions/odoo:12.0
+    image: codions/odoo:14.0
     container_name: odoo
     restart: always
     volumes:
@@ -19,13 +19,13 @@ services:
       LONGPOLLING_PORT: 8072
       WORKERS: 3
       ODOO_PASSWORD: secret
-      ODOO_VERSION: 12.0
+      ODOO_VERSION: 14.0
 
       # ODOO_ENTERPRISE: 0
       # TRUSTCODE_ENTERPRISE: 0
 
       # Optional database name (required if you use autoupdate command when run the image)
-      DATABASE: odoo_erp
+      # DATABASE: postgres
 
       # CPU limit before timeout
       # TIME_CPU: 600
@@ -42,7 +42,7 @@ services:
       - "8072:8072"
     depends_on:
       - postgres
-      - maildev
+      - mailhog
 
   postgres:
     container_name: postgres
@@ -51,7 +51,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=secret
       - POSTGRES_USER=odoo
-      - POSTGRES_DB=odoo_erp
+      - POSTGRES_DB=postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports: 
@@ -68,7 +68,7 @@ services:
 
   mailhog:
     image: mailhog/mailhog:latest
-    container_name: maildev
+    container_name: mailhog
     ports:
       - "8025:8025"
       - "1025:1025"
